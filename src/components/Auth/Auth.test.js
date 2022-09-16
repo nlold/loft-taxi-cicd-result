@@ -27,21 +27,21 @@ describe("Auth page simple test", () => {
     jest.spyOn(router, "useNavigate").mockImplementation(() => navigate);
   });
 
-  it("Input data and redirect to Map", () => {
-    customRender(<Auth />, currentState);
+  // it("Input data and redirect to Map", () => {
+  //   customRender(<Auth />, currentState);
 
-    userEvent.type(screen.getByLabelText("Email"), "mentor-stream@mail.ru");
-    userEvent.type(screen.getByLabelText("Password"), "1q2w3e4r");
+  //   userEvent.type(screen.getByLabelText("Email"), "mentor-stream@mail.ru");
+  //   userEvent.type(screen.getByLabelText("Password"), "1q2w3e4r");
 
-    fireEvent.submit(screen.getByTestId("form-auth-page"), {
-      target: {
-        password: { value: "1q2w3e4r" },
-        email: { value: "mentor-stream@mail.ru" },
-      },
-    });
+  //   fireEvent.submit(screen.getByTestId("form-auth-page"), {
+  //     target: {
+  //       password: { value: "1q2w3e4r" },
+  //       email: { value: "mentor-stream@mail.ru" },
+  //     },
+  //   });
 
-    expect(navigate).toHaveBeenCalledWith("/map");
-  });
+  //   expect(navigate).toHaveBeenCalledWith("/map");
+  // });
 
   it("Redirect to Registration", () => {
     customRender(<Auth />, currentState);
