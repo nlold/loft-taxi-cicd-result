@@ -27,6 +27,8 @@ describe("Auth page simple test", () => {
     jest.spyOn(router, "useNavigate").mockImplementation(() => navigate);
   });
 
+  //hell
+
   // it("Input data and redirect to Map", () => {
   //   customRender(<Auth />, currentState);
 
