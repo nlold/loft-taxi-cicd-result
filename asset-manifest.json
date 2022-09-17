@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/loft-taxi-cicd-result/static/css/main.4e655cc7.css",
-    "main.js": "/loft-taxi-cicd-result/static/js/main.af5424c5.js",
+    "main.js": "/loft-taxi-cicd-result/static/js/main.dbc73cfc.js",
     "static/media/map-background.png": "/loft-taxi-cicd-result/static/media/map-background.6f03adef9250a774ee04.png",
     "static/media/logo-login.svg": "/loft-taxi-cicd-result/static/media/logo-login.14346112c2e448417e51613c5abdc65c.svg",
     "static/media/logo.svg": "/loft-taxi-cicd-result/static/media/logo.b62304ff3b4470950e0cfe664bfa2148.svg",
     "index.html": "/loft-taxi-cicd-result/index.html",
     "main.4e655cc7.css.map": "/loft-taxi-cicd-result/static/css/main.4e655cc7.css.map",
-    "main.af5424c5.js.map": "/loft-taxi-cicd-result/static/js/main.af5424c5.js.map"
+    "main.dbc73cfc.js.map": "/loft-taxi-cicd-result/static/js/main.dbc73cfc.js.map"
   },
   "entrypoints": [
     "static/css/main.4e655cc7.css",
-    "static/js/main.af5424c5.js"
+    "static/js/main.dbc73cfc.js"
   ]
 }
