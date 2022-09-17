@@ -8,6 +8,7 @@ import { Map } from "../Map/Map";
 import "./App.css";
 
 const App = () => {
+  console.log('НОВЫЙ IREBASE DEPLOY')
   return (
     <div id="app" data-testid="application" className="App">
       <Routes>
