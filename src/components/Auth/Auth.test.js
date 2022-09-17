@@ -51,5 +51,6 @@ describe("Auth page simple test", () => {
     userEvent.click(screen.getByTestId("new-profile-btn"));
 
     expect(navigate).toHaveBeenCalledWith("/registration");
+    // expect(navigate).toHaveBeenCalledWith("/map");
   });
 });
