@@ -6,7 +6,7 @@ name: Build and Deploy to Firebase
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -16,52 +16,51 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     name: Build
-    
+
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the jo
     steps:
-     
       - name: Checkout repository
         uses: actions/checkout@main
-        
+
       - name: Install dependencies
         run: npm ci
-        
+
       - name: Build dependencies
         run: npm run build
-        
+
       - name: Archive production artifact
         uses: actions/upload-artifact@main
-        
+
         with:
           name: build
           path: build
-          
+
   deploy:
     name: Deploy
-    
+
     needs: build
-    
+
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@main
-        
+
       - name: Download artifact
         uses: actions/download-artifact@main
-        
+
         with:
-          name: dist
-          path: dist
-          
+          name: build
+          path: build
+
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
-        
+
         with:
           args: deploy --only hosting
-          
+
         env:
           FIREBASE_TOKEN: ${ secrets.FIREBASE_SECRET }}
